@@ -24,13 +24,23 @@
 		"4000": {
 			"label": "AppPort"
 		}
-	}
+	},
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	// "postCreateCommand": "yarn install",
+	"postCreateCommand": "npm install",
 
 	// Configure tool-specific properties.
-	// "customizations": {},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"esbenp.prettier-vscode"
+			],
+			"settings": {
+				"editor.fontFamily": "Menlo, Monaco, 'Courier New', monospace",
+				"terminal.integrated.fontFamily": "Menlo, Monaco, 'Courier New', monospace"
+			}
+		}
+	}
 
 	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
 	// "remoteUser": "root"
